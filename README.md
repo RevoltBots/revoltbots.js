@@ -21,6 +21,25 @@ client.on("ready", ()=>{
     		console.log(result)
 	});
 });
+
+client.on("message", ()=>{
+// ..
+	api.hasVoted(client, "REVOLTUSERID").then(result => {
+    		console.log(result)
+	});
+
+// ...
+	api.getStats(client).then(result => {
+    		console.log(result)
+	});
+// ...
+
+	api.getVoted(client).then(result => {
+    		console.log(result)
+	});
+// ..
+})
+
 client.loginBot("revolt.BOT-TOKEN_HERE")
 ```
 > WIP
