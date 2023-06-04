@@ -1,13 +1,27 @@
 {
   "name": "revoltbots.js",
-  "version": "1.0.4",
-  "description": "",
+  "version": "1.0.6",
+  "description": "An API wrapper for revolt bot list",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+	"revolt-chat",
+	"revolt-bot",
+	"revoltbots",
+	"revoltchat",
+	"revoltbotlist"
+  ],
+  "repository":{
+    "type": "git",
+    "url": "https://www.npmjs.com/package/revoltbots.js"
+  },
+  "homepage": "https://github.com/Akrasio/revoltbots.js#readme",
+  "author": "nyxrdev",
+  "bugs": {
+    "url": "https://github.com/Akrasio/revoltbots.js/issues"
+  },
   "license": "ISC",
   "dependencies": {
     "wumpfetch": "^0.3.1"
