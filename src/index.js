@@ -15,7 +15,6 @@ class Client {
         let servercount = Number(bot.servers.size) || Number(bot.servers.size()) || null;
         if (!this.KEY) throw new TypeError('API token not provided');
         if (!Number(servercount)) throw new TypeError('Server count must be a valid number');
-	console.log(servercount)
           return fetch(`https://revoltbots.org/api/v1/bots/stats`, {
             method: 'POST',
             headers: {
