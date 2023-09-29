@@ -18,7 +18,7 @@ class Client {
           return fetch(`https://revoltbots.org/api/v1/bots/stats`, {
             method: 'POST',
             headers: {
-                server_count: servercount,
+                'server_count': `${servercount]`,
                 'Authorization': this.KEY,
             }
         }).send()
