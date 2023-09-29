@@ -17,7 +17,7 @@ class Client {
         if (!Number(servercount)) throw new TypeError('Server count must be a valid number');
           return fetch(`https://revoltbots.org/api/v1/bots/stats`, {
             method: 'POST',
-	    body: JSON.Stringify({'server_count': servercount})
+	    body: JSON.Stringify({'server_count': servercount}),
             headers: {
                 'Authorization': this.KEY,
             }
@@ -42,7 +42,8 @@ class Client {
             headers: {
                 server_count: servercount,
                 'Authorization': this.KEY,
-            }
+            },
+  	    body: JSON.Stringify({'server_count': servercount}),
         }).send()
             .then(res => res.json())
 	}, 3600000)
