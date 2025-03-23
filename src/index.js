@@ -15,7 +15,7 @@ class Client {
         let servercount = Number(bot.servers.size) || Number(bot.servers.size()) || null;
         if (!this.KEY) throw new TypeError('API token not provided');
         if (!Number(servercount)) throw new TypeError('Server count must be a valid number');
-          return fetch(`https://revoltbots.org/api/v1/bots/stats`, {
+          return fetch(`https://revoltbots.mooo.com/api/v1/bots/stats`, {
             method: 'POST',
 	    body: JSON.stringify({'servers': servercount}),
             headers: {
@@ -38,7 +38,7 @@ class Client {
         let servercount = Number(bot.servers.size) || Number(bot.servers.size()) || null;
         if (!this.KEY) throw new TypeError('API token not provided');
         if (!Number(servercount)) throw new TypeError('Server count must be a valid number');
-          return fetch(`https://revoltbots.org/api/v1/bots/stats`, {
+          return fetch(`https://revoltbots.mooo.com/api/v1/bots/stats`, {
             method: 'POST',
             headers: {
                 servers: servercount,
@@ -59,7 +59,7 @@ class Client {
     async getStats(bot) {
 	if (!bot) throw new TypeError("No bot client given!");
         if (!this.KEY) throw new TypeError('API token not provided');
-          return fetch(`https://revoltbots.org/api/v1/bots/${bot.user._id || bot.user.id}`, {
+          return fetch(`https://revoltbots.mooo.com/api/v1/bots/${bot.user._id || bot.user.id}`, {
             method: 'GET',
             headers: {
                 'Authorization': this.KEY,
@@ -80,7 +80,7 @@ class Client {
 	if (!bot) throw new TypeError("No bot client given!");
         if (!this.KEY) throw new TypeError('API token not provided');
 	if (!userId) throw new TypeError("No userId given!");
-          return fetch(`https://revoltbots.org/api/v1/bots/${bot.user._id || bot.user.id}/votes?user=${userId}`, {
+          return fetch(`https://revoltbots.mooo.com/api/v1/bots/${bot.user._id || bot.user.id}/votes?user=${userId}`, {
             method: 'GET',
             headers: {
                 'Authorization': this.KEY,
@@ -100,7 +100,7 @@ class Client {
     async getVoted(bot) {
 	if (!bot) throw new TypeError("No bot client given!");
         if (!this.KEY) throw new TypeError('API token not provided');
-          return fetch(`https://revoltbots.org/api/v1/bots/${bot.user._id || bot.user.id}/votes`, {
+          return fetch(`https://revoltbots.mooo.com/api/v1/bots/${bot.user._id || bot.user.id}/votes`, {
             method: 'GET',
             headers: {
                 'Authorization': this.KEY,
